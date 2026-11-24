@@ -1,0 +1,129 @@
+/* The proposal rail shares one daylight studio, including the space between cards. */
+.ore-camera::before {
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(150deg,#f9fbfd,#edf4fa 75%,#e4eef7);
+  opacity:var(--scope-light,0);
+}
+html .ore-ready .ore-scene[data-group="scope"] {
+  --ink:#101d30; --accent:#26517d; --bg:#fff;
+  --scene-image:none; --scene-wash:transparent;
+  color:#101d30;background:linear-gradient(113deg,#fff 12%,#fcfeff 53%,#f2f8fc 99%);
+  border:1px solid #fff; border-radius:clamp(20px,2vw,36px);
+  box-shadow:0 0 0 1px #d5e2ed,0 14px 30px -22px #577a9c80,0 28px 64px -46px #456f9760;
+}
+.ore-scene[data-group="scope"]::after {
+  content:"";position:absolute;inset:0;z-index:5;pointer-events:none;border-radius:inherit;
+  box-shadow:inset 0 3px 8px -3px #70aeebc4,inset 2px 0 7px -3px #a3bef28f,inset -2px 0 7px -3px #7cd6f28f,inset 0 -2px 5px -3px #79a4d880;
+  opacity:var(--panel-focus,0);
+}
+.ore-scene[data-group="scope"] .ore-atmos {display:none}
+.ore-ready .ore-scene[data-group="scope"] .ore-copy {width:40%;margin-left:5.4%;padding:3.5% 0;transform:none}
+.ore-scene[data-group="scope"] .ore-kicker {margin-bottom:clamp(16px,2.8vh,33px);gap:9px;color:#35546e;font-weight:570}
+.ore-scene[data-group="scope"] .ore-kicker::before {width:20px;height:2px;background:#53a7da}
+.ore-scene[data-group="scope"] .ore-copy h2 {margin-bottom:clamp(16px,2.7vh,33px);font-size:clamp(43px,min(5.1vw,9.5vh),91px);font-weight:485;letter-spacing:-.073em;line-height:1.01}
+.ore-scene[data-group="scope"] .ore-copy h2 em {color:#426d93;font-weight:460;letter-spacing:inherit}
+.ore-scene[data-group="scope"] .ore-copy>p {max-width:36ch;font-size:clamp(15px,1.18vw,20px);color:#42556a;line-height:1.5}
+.ore-scene[data-group="scope"] .ore-items {gap:10px;margin-top:clamp(19px,3.1vh,36px)}
+.ore-scene[data-group="scope"] .ore-items li {padding-left:22px;font-size:clamp(13px,.99vw,17px);color:#25394d;line-height:1.45}
+.ore-scene[data-group="scope"] .ore-items li::before {left:1px;top:.41em;width:10px;height:5px;border:solid #258acf;border-width:0 0 1.6px 1.6px;transform:rotate(-45deg);opacity:1}
+.ore-scene[data-group="scope"] .ore-art {
+  inset:3.2% 1.85% 3.2% 48%;overflow:hidden;border-radius:clamp(15px,1.6vw,29px);
+  border:1px solid #d5e5f0;box-shadow:inset 0 0 0 1px #ffffff90;
+  color:#162e48;isolation:isolate;
+}
+.ore-scene[data-group="scope"] .ore-art::before {
+  content:"";pointer-events:none;position:absolute;z-index:-1;inset:0;
+  background:var(--art-surface,linear-gradient(135deg,#f4fafd,#d6e8f4));
+}
+.ore-store .ore-device {
+  --art-surface:linear-gradient(128deg,#f6fbffff 2%,#eff8ffc9 36%,#ddedfb83 70%,#e7f5ffc9 100%),url('assets/studio-water.webp') 62% 54%/cover;
+}
+.ore-store .ore-phone {width:clamp(190px,19vw,340px);border:1px solid #f7fdff;border-radius:clamp(20px,2.2vw,34px);padding:clamp(12px,1.3vw,24px);background:linear-gradient(145deg,#fff,#f5faff);box-shadow:inset 0 0 0 1px #d7e6f4,2px 3px 0 #b5c7d4,4px 6px 0 #9fb3c4,0 24px 42px -13px #345a8290;transform:perspective(900px) translateX(-4%) rotateY(calc(-12deg + var(--phase)*8deg)) rotateZ(calc(-5deg + var(--phase)*3deg))}
+.ore-store .ore-phonephoto {height:clamp(95px,20vh,220px);background:radial-gradient(at 55% 28%,#f9fcff,#dceafa);overflow:hidden}
+.ore-store .ore-phonephoto img {padding:4% 0;transform:rotate(4deg)}
+.ore-store .ore-mockcta {background:linear-gradient(#40b1ff,#0076d8);box-shadow:0 4px 10px #0a88e238,inset 0 1px 1px #ffffff85;color:white}
+.ore-store .ore-ticket {bottom:13%;right:5%;background:#f9fcfff2;border:1px solid white;border-radius:13px;color:#14324d;box-shadow:0 9px 30px -10px #528bb570}
+.ore-manage .ore-dash-art {
+  --art-surface:radial-gradient(ellipse at 67% 24%,#fff 1%,#f3f8ff 35%,transparent 75%),linear-gradient(129deg,#e2eafa,#d9edf6 72%,#eef7fd);
+}
+.ore-manage .ore-dash {width:80%;max-height:90%;background:linear-gradient(125deg,#fff,#f6fbff);border:1px solid #fff;color:#172e47;box-shadow:0 1px 3px #597b9d39,0 22px 42px -22px #466f98a8}
+.ore-manage .ore-dash-row span {background:#e8f4fe;color:#236088}
+.ore-partner .ore-partner-art {--art-surface:linear-gradient(155deg,#ffffffbc,#e7f3ff64 48%,#deefff18),url('assets/scope-daylight-plate.webp') center/100% 100%}
+.partner-floor {position:absolute;left:57%;bottom:9%;width:35%;height:5%;border-radius:50%;transform:rotate(-4deg);background:radial-gradient(ellipse,#799db6a1,#8da9bd44 37%,transparent 72%);filter:blur(4px)}
+.label-product {position:absolute;right:7%;top:8%;width:38%;height:82%;object-fit:contain;transform-origin:50% 92%;transform:rotate(calc(4deg - var(--phase)*4deg));filter:drop-shadow(4px 6px 3px #5478981a)}
+.label-sheet {position:absolute;left:6%;top:29%;width:46%;padding:4%;border-radius:5px;background:linear-gradient(145deg,#fff,#f8fbff);color:#263c54;pointer-events:auto;box-shadow:0 2px 3px #59708a20,0 17px 26px -15px #36536d80;transform:rotate(calc(-8deg + var(--phase)*5deg));transform-origin:60% 70%}
+.label-sheet::before {content:"";position:absolute;inset:4% -2% -4% 2%;background:#f4f8ff;border:1px solid #cbd9e9;border-radius:4px;z-index:-1;transform:rotate(4deg)}
+.label-sheet:focus-within {transform:rotate(0);outline:2px solid #7cbff7;outline-offset:4px}
+.proof-heading,.proof-foot {display:flex;align-items:center;justify-content:space-between}
+.ore-art .proof-heading span,.ore-art .proof-foot span {font-size:clamp(9px,.8vw,14px);font-weight:530;letter-spacing:-.025em}
+.proof-heading img {width:22%;max-width:49px;height:auto;filter:brightness(0) saturate(100%)}
+.label-die {margin:10% 0 9%;padding:10% 7%;min-width:0;display:flex;flex-direction:column;gap:7px;background:linear-gradient(125deg,#155cba,#173ba5 72%,#17319a);border:1px solid #436cce;border-radius:11% / 15%;color:#fff;box-shadow:inset 0 0 0 3px #225dc1}
+.ore-art .label-die span,.ore-art .label-die small {font-size:clamp(9px,.69vw,12px);color:#eef6ff;line-height:1.2}
+.label-die input {width:100%;min-width:0;padding:0 0 4px;border:0;border-bottom:1px solid #afc7ff88;outline:none;border-radius:0;appearance:none;background:none;color:white;font-family:inherit;font-size:clamp(17px,2vw,39px);font-weight:510;line-height:1.1;letter-spacing:-.065em;cursor:text}
+.label-die input::placeholder {color:white;opacity:1}
+.label-die input:focus {border-bottom-color:white}
+.proof-foot i {width:27%;height:5px;background:linear-gradient(90deg,#152f97 0 33%,#268ed6 33% 66%,#bddef1 66% 100%)}
+.ore-design .ore-design-art {--art-surface:url('assets/scope-daylight-plate.webp') center/100% 100%;display:block}
+.study-image {position:absolute;inset:2% 20% 12% 0;pointer-events:none}
+.study-image img {position:absolute;inset:0;display:block;width:100%;height:100%;min-height:0;object-fit:contain}
+.study-loupe {position:absolute;right:5%;top:31%;width:25%;margin:0;display:grid;gap:8px;justify-items:center;pointer-events:none;z-index:2}
+.study-leader {position:absolute;z-index:1;height:1px;background:#6593b4a1;transform-origin:0 50%;pointer-events:none}
+.study-leader::before {content:"";position:absolute;left:-2px;top:-1.5px;width:4px;height:4px;border-radius:50%;background:#47759a;box-shadow:0 0 0 1px #ffffffc0}
+.detail-lens {position:relative;width:100%;aspect-ratio:1;padding:5px;background:linear-gradient(145deg,#fff,#e5f3fe);border:1px solid #fff;border-radius:19%;box-shadow:0 12px 25px -13px #4268797d,0 0 0 1px #b8d2e8;overflow:hidden}
+.detail-lens img {display:block;width:100%;height:100%;border-radius:16%;object-fit:contain;pointer-events:none}
+.detail-lens img[hidden] {display:none}
+.study-loupe figcaption {color:#324e68;font-size:clamp(10px,.80vw,14px);line-height:1.15;text-align:center}
+.detail-switch {position:absolute;z-index:3;bottom:4.8%;left:50%;transform:translateX(-50%);display:flex;gap:2px;padding:4px;border:1px solid white;border-radius:30px;background:#f6fbffed;box-shadow:0 0 0 1px #c4d8e8,0 5px 13px -7px #527b9f80;pointer-events:auto}
+.detail-switch button {border:0;border-radius:22px;padding:7px 12px;background:transparent;color:#254660;font:540 clamp(11px,.86vw,15px)/1.15 Inter,sans-serif;white-space:nowrap;cursor:pointer}
+.detail-switch button[aria-pressed=true] {background:linear-gradient(#36acfa,#0577d4);color:#fff;box-shadow:inset 0 1px 1px #ffffff90,0 2px 6px #1885d14a}
+.detail-switch button:focus-visible {outline:2px solid #157ccb;outline-offset:2px}
+@media(min-width:741px) and (max-height:650px) {
+  .ore-scene[data-group="scope"] .ore-copy h2 {font-size:clamp(29px,7.9vh,52px);margin-bottom:10px}
+  .ore-scene[data-group="scope"] .ore-kicker {margin-bottom:10px}
+  .ore-scene[data-group="scope"] .ore-copy>p {font-size:14px}
+  .ore-scene[data-group="scope"] .ore-items {gap:5px;margin-top:13px}
+  .ore-scene[data-group="scope"] .ore-items li {font-size:12px}
+  .ore-store .ore-ticket {bottom:8%;padding:7px 12px}
+  .ore-store .ore-phone {width:44%}
+  .ore-store .ore-phonephoto {margin:5px 0;height:14vh}
+  .ore-store .ore-phonecopy b {font-size:22px}
+  .ore-manage .ore-dash {padding:12px 16px}
+  .ore-manage .ore-dash-row img {height:30px}
+}
+@media(max-width:740px),(max-aspect-ratio:4/5) {
+  html .ore-ready .ore-scene[data-group="scope"] {display:flex;flex-direction:column;padding:clamp(13px,2.4vh,24px) clamp(12px,3.4vw,24px) clamp(10px,1.8vh,17px);gap:clamp(11px,2.1vh,20px)}
+  .ore-ready .ore-scene[data-group="scope"] .ore-copy {position:static;flex:none;margin:0;width:100%;height:auto;padding:2.5% 2% 0;min-height:0}
+  .ore-scene[data-group="scope"] .ore-kicker {margin-bottom:8px;line-height:1.2;font-size:11px}
+  .ore-scene[data-group="scope"] .ore-copy h2 {font-size:clamp(28px,7.6vw,52px);line-height:1.04;margin-bottom:9px}
+  .ore-scene[data-group="scope"] .ore-copy>p {max-width:46ch;font-size:clamp(13px,3.4vw,16px);line-height:1.38}
+  .ore-scene[data-group="scope"] .ore-items {margin-top:10px;gap:4px}
+  .ore-scene[data-group="scope"] .ore-items li {font-size:clamp(12px,3.05vw,15px);line-height:1.28;padding-left:17px}
+  .ore-scene[data-group="scope"] .ore-items li::before {width:8px;height:4px;top:.35em}
+  .ore-scene[data-group="scope"] .ore-art {position:relative;flex:1;inset:auto;width:100%;min-height:0;max-height:none;border-radius:14px}
+  .ore-store .ore-phone {width:min(47%,22vh);padding:8px;border-radius:16px}
+  .ore-store .ore-phonephoto {margin:6px 0;height:clamp(44px,10vh,103px)}
+  .ore-store .ore-mockcta {font-size:9px;padding:5px}
+  .ore-store .ore-ticket {right:3%;bottom:8%;padding:8px 11px}
+  .ore-store .ore-ticket span {font-size:9px}
+  .ore-manage .ore-dash {width:min(88%,360px);padding:12px}
+  .label-sheet {left:5%;width:49%;top:24%}
+  .label-die {margin:9% 0 7%;gap:5px}
+  .ore-art .label-die small {font-size:8px}
+  .study-image {inset:2% 19% 15% 0}
+  .study-loupe {width:25%;right:4.5%;gap:5px}
+  .detail-lens {padding:3px}
+  .study-loupe figcaption {font-size:9px}
+  .detail-switch {bottom:4%;padding:3px}
+  .detail-switch button {padding:6px 9px;font-size:11px}
+}
+@media(max-width:740px) and (max-height:680px) {
+  html .ore-ready .ore-scene[data-group="scope"] {top:4%;height:85%;gap:8px;padding:9px 10px}
+  .ore-scene[data-group="scope"] .ore-kicker {margin-bottom:5px}
+  .ore-scene[data-group="scope"] .ore-copy h2 {margin-bottom:5px}
+  .ore-scene[data-group="scope"] .ore-items {margin-top:6px;gap:3px}
+  .label-sheet {top:16%}
+  .detail-switch button {padding:5px 7px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .ore-scene[data-group="scope"] .label-product,.ore-scene[data-group="scope"] .study-image img,.ore-scene[data-group="scope"] .study-loupe,.label-sheet {transform:none}
+}
